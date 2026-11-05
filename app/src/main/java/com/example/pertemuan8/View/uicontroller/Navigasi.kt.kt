@@ -60,6 +60,12 @@ fun SiswaApp(
     }
 }
 
+private fun cancelAndBackToFormulir(
+    navController: NavHostController
+) {
+    navController.popBackStack(Navigasi.Formulir.name, inclusive = false)
+}
+
 @Composable
 fun TampilSiswa(statusUISiswa: value, onBackButtonClicked: () -> cancelAndBackToFormulir) {
     TODO("Not yet implemented")
