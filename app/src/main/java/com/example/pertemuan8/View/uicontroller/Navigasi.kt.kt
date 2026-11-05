@@ -1,4 +1,6 @@
 package com.example.pertemuan8.View.uicontroller
 
-class Navigasi {
+enum class Navigasi {
+    Formulir,
+    Detail
 }
