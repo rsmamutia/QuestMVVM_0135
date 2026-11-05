@@ -1,6 +1,5 @@
 package com.example.pertemuan8.View
 
-import android.R
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -118,7 +117,9 @@ fun FormSiswa(
                 modifier = Modifier.fillMaxWidth(1f),
                 enabled = txtAlamat.isNotEmpty(),
                 onClick = {onSubmitButtonClicked(listData)}
-            ) { }
+            ) {
+                Text(stringResource(R.string.submit))
+            }
 
         }
     }
