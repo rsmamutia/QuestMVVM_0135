@@ -25,7 +25,8 @@ fun SiswaApp(
     modifier: Modifier,
     viewModel: SiswaViewModel = viewModel(),
     navController: NavHostController = rememberNavController(),
-    collectAsState: Any.() -> Unit
+    collectAsState: Any.() -> Unit,
+    name: String
 ){
     Scaffold { isiRuang->
         //edit 2 : tambahkan variabel uiState
