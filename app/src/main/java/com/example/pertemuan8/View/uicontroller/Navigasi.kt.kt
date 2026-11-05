@@ -25,7 +25,8 @@ fun SiswaApp(
     modifier: Modifier,
     viewModel: SiswaViewModel = viewModel(),
     navController: NavHostController = rememberNavController(),
-    collectAsState: Any.() -> Unit
+    collectAsState: Any.() -> Unit,
+    cancelAndBackToFormulir: (NavHostController) -> cancelAndBackToFormulir
 ){
     Scaffold { isiRuang->
         //edit 2 : tambahkan variabel uiState
@@ -47,6 +48,21 @@ fun SiswaApp(
                     }
                 )
             }
+
+            composable(route = Navigasi.Detail.name){
+                TampilSiswa(
+                    //edit 5 : parameter statusUISiswa
+                    statusUISiswa = uiState.value,
+                    onBackButtonClicked = { cancelAndBackToFormulir(navController) }
+                )
+            }
+        }
+    }
+}
+
+@Composable
+fun TampilSiswa(statusUISiswa: value, onBackButtonClicked: () -> cancelAndBackToFormulir) {
+    TODO("Not yet implemented")
 }
 
 @Composable
